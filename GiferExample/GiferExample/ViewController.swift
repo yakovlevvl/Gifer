@@ -60,7 +60,7 @@ final class ViewController: UIViewController {
     private func createGifFromVideo(_ videoUrl: URL) {
         createButton.setTitle("Process...", for: .normal)
         createButton.isUserInteractionEnabled = false
-        Gifer.createGifFromVideo(videoUrl, frameRate: 10, loopCount: 0, startTime: 0, size: CGSize(width: 700, height: 700)) { gifUrl, error in
+        Gifer.createGifFromVideo(videoUrl, frameRate: 30, loopCount: 0, startTime: 0, size: CGSize(width: 1400, height: 1400)) { gifUrl, error in
             guard let url = gifUrl else { return }
             self.createButton.isUserInteractionEnabled = true
             self.createButton.setTitle("Create GIF", for: .normal)
